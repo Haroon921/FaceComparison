@@ -1,6 +1,7 @@
 ![image1](media/image5.jpg) 
 
-[Click here to try it out for FREE!](http://faceverify.azurewebsites.net/)
+# [Click here to try it out](http://faceverify.azurewebsites.net/)
+
 # Use Azure Cognitive Services (Face API) to compare a person picture from an ID and compare it with a person from a video. 
 
 ## Create a web service for verify the face from the image to video
