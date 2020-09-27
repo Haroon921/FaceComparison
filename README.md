@@ -1,4 +1,6 @@
 ![image1](media/image5.jpg) 
+
+[Click here to try it out for FREE!](http://faceverify.azurewebsites.net/)
 # Use Azure Cognitive Services (Face API) to compare a person picture from an ID and compare it with a person from a video. 
 
 ## Create a web service for verify the face from the image to video
@@ -129,6 +131,69 @@ Open the terminal the root folder of project and, now you can run the flask thro
 After successfully run the flask, you can see the flask server is running on http://127.0.0.1:5000/
 
 Open the browser and hit the above URL.
+
+## Deploy face compatre web API on Azure
+
+Deploy the web app service on Azure app service. Firstly, to register the app service on the Azure cloud.
+
+### Step 1: Create a subscription:
+
+The creation of a web app on app services, select your subscription plan with the resource group. In the Name section, give your API name, which you want it.
+
+We are using the code file for the python 3.7 Linux server, so choose the code on the publish column with a runtime stack of Python 3.6 of OS Linux. Finally, click on the review+create button. It’ll consume a few minutes to create it.
+
+![image6](media/image6.jpg) 
+
+After successfully done, you can check with the URL as the below images for confirmation.
+
+![image7](media/image7.jpg) 
+
+### Step 2: Deployment Setup:
+
+Now, open your azure account and find the app service we have already created for the deployment. Then go to the deployment center tab and continue with the selection of local Git.
+
+![image7](media/image8.jpg) 
+
+On the next screen, continue with the selection of the App Service build service section.
+
+![image9](media/image9.jpg) 
+
+At last, click on the Deployment credentials tab for getting the username and password of the local Git. and saved on the text file, we’ll use it for authentication on deployment time.
+
+![image10](media/image10.jpg) 
+
+### Setp 3: Deploy on Azure App Services:
+Go to the project directory on the terminal and run the below command to deploy the local project into azure. After running the last command($ git push azure master), it’ll ask the username & password, kindly provide the username & password, which we already saved on the text file.
+
+            git init
+            git add 
+            git commit -m 'Initial commit'
+            git remote add azure https://flaskapi.scm.azurewebsites.net:443/flaskapi.git
+            git push azure master
+
+On the below screenshot, we can verify the code deployed successfully            
+
+![image11](media/image11.jpg) 
+
+### Step 4: Start-up command:
+
+Add the below command on the startup command section of the configuration tab.
+
+            gunicorn — bind=0.0.0.0 — timeout 600 app:app
+            
+![image12](media/image12.jpg) 
+
+### Step 5: Step 5: Environment ready of Azure web service via SSH shell:
+
+Open the SSH tab on the azure and change the root directory (cd ..)
+
+![image13](media/image13.jpg) 
+
+             cd ..
+             source antenv3.6/bin/activate
+             pip install ffmpeg
+
+Finally, we deployed the flask API on azure. Click the below URL for confirmation. The URL is different in your case.
 
 ## Helpful resources
 
