@@ -10,7 +10,21 @@ Face verification is a web-based application in which stakeholders can use this 
 
 ![image](media/solution.jpg)
 
-## Create a web service for verify the face from the image to video
+# How it works
+
+1) The stakeholder uploads the image of the ID card and recorded video of the user to identify the authenticity.
+
+2) Image and video stored in the file server of the web app.
+
+3) Video processing through the python script to achieving the image from the video.
+
+4) Saved image of the video to pass into the Cognitive Face Verification API for analyzing the face.
+
+5) The final verification result displayed in the web app.
+
+## Follow the below steps to replicate this in your local environment.
+
+Create a web service for verify the face from the image to video
 
 ### First of all, we require the packages to create a web service. Here we are using the flask Web service with python script.
 
