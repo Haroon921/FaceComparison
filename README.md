@@ -2,10 +2,18 @@
 
 # [Click here to try it out](http://faceverify.azurewebsites.net/)
 
-# Use Azure Cognitive Services (Face API) to compare a person picture from an ID and compare it with a person from a video. 
+# Face Verification from the ID-Card and the video using Azure Cognitive Services (Face API)
+
+Face verification is a web-based application in which stakeholders can use this application to verify a user’s identity from the active ID-Card to his/her recorded video and easy to identify user authenticity.
+
+# Solution Architecture
+
+![image](media/solution.jpg)
 
 ## Create a web service for verify the face from the image to video
+
 ### First of all, we require the packages to create a web service. Here we are using the flask Web service with python script.
+
 ### Prerequisites
 
 ●	[Python 3.5+](https://www.python.org/)
