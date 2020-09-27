@@ -131,7 +131,8 @@ After successfully run the flask, you can see the flask server is running on htt
 Open the browser and hit the above URL.
 
 ## Helpful resources
-[Microsoft Face API)(Face detection and attributes)
+
+[Microsoft Face detection and attributes](https://docs.microsoft.com/en-us/azure/cognitive-services/face/concepts/face-detection)
 
 [Build a rest API using Flask](https://www.geeksforgeeks.org/python-build-a-rest-api-using-flask/)
 
